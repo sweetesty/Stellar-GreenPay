@@ -352,9 +352,9 @@ router.post("/admin/register", async (req, res) => {
       fee: "1000", 
       networkPassphrase: NETWORK_PASSPHRASE 
     })
-    .addOperation(contract.call("register_project", adminAddress, projectId, name, wallet, parseInt(co2PerXLM)))
-    .setTimeout(30)
-    .build();
+      .addOperation(contract.call("register_project", adminAddress, projectId, name, wallet, parseInt(co2PerXLM)))
+      .setTimeout(30)
+      .build();
 
     logAdminAction({
       actor: adminAddress,

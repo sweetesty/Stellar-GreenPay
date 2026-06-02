@@ -100,7 +100,7 @@ async function recordDonation(req, res, next) {
           );
 
           await client.query(
-            `UPDATE donation_matches SET matched_xlm = matched_xlm + $1 WHERE id = $2`,
+            "UPDATE donation_matches SET matched_xlm = matched_xlm + $1 WHERE id = $2",
             [matchAmount, match.id],
           );
         }
